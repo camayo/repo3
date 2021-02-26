@@ -1,4 +1,10 @@
-a
-b
-c
-d
+pipeline {
+    agent any
+    stages {
+        stage('Stage repo3 33333') {
+            steps {
+                echo '33333222Hello World22233333'
+            }
+        }
+    }
+}
