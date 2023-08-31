@@ -1,21 +1,21 @@
-        apiVersion: v1
-        kind: Pod
-        spec:
-          securityContext:
-            runAsUser: 1000
-          containers:
-          - name: terraform
-            image: hashicorp/terraform:${props["terraform.version"]}
-            command:
-            - cat
-            tty: true
-          - name: tfsec
-            image: tfsec/tfsec-ci:${props["tfsec.version"]}
-            command:
-            - cat
-            tty: true
-          - name: tflint
-            image: ghcr.io/terraform-linters/tflint:${props["tflint.version"]}
-            command:
-            - cat
-            tty: true
+apiVersion: v1
+kind: Pod
+spec:
+  securityContext:
+	runAsUser: 1000
+  containers:
+  - name: terraform
+	image: hashicorp/terraform:${props["terraform.version"]}
+	command:
+	- cat
+	tty: true
+  - name: tfsec
+	image: tfsec/tfsec-ci:${props["tfsec.version"]}
+	command:
+	- cat
+	tty: true
+  - name: tflint
+	image: ghcr.io/terraform-linters/tflint:${props["tflint.version"]}
+	command:
+	- cat
+	tty: true
