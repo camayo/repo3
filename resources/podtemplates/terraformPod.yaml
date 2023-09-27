@@ -5,17 +5,17 @@ spec:
     runAsUser: 1000
   containers:
   - name: terraform
-    image: hashicorp/terraform:${props["terraform.version"]}
+    image: hashicorp/terraform
     command:
     - cat
     tty: true
   - name: tfsec
-    image: tfsec/tfsec-ci:${props["tfsec.version"]}
+    image: tfsec/tfsec-ci
     command:
     - cat
     tty: true
   - name: tflint
-    image: ghcr.io/terraform-linters/tflint:${props["tflint.version"]}
+    image: ghcr.io/terraform-linters/tflint
     command:
     - cat
     tty: true
