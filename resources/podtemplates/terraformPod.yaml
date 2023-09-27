@@ -15,7 +15,7 @@ spec:
     - cat
     tty: true
   - name: tflint
-    image: ghcr.io/terraform-linters/tflint
+    image: ghcr.io/terraform-linters/tflint:"v0.32.1"
     command:
     - cat
     tty: true
